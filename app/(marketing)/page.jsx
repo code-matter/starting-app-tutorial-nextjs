@@ -1,7 +1,7 @@
 import logo from '../../assets/logo.jpg'
 import Link from 'next/link'
 
-export const HomePage = () => {
+export const HomePage = async () => {
     return (
         <div id='home'>
             <img src={logo.src} alt='A newspaper' />
