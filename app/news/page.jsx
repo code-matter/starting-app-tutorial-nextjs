@@ -1,5 +1,5 @@
-import NewsList from '@/components/NewsList'
-import { DUMMY_NEWS } from '@/lib/constants/dummy-news'
+import NewsList from '../../components/NewsList'
+import { DUMMY_NEWS } from '../../lib/constants/dummy-news'
 import React from 'react'
 
 const News = () => {

@@ -6,7 +6,7 @@ import React from 'react'
 const NavLink = ({ href, children }) => {
     const path = usePathname()
     return (
-        <Link href={href} className={path === href ? 'active' : ''}>
+        <Link href={href} className={path.startsWith(href) ? 'active' : ''}>
             {children}
         </Link>
     )

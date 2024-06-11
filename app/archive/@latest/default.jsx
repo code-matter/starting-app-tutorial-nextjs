@@ -1,5 +1,5 @@
-import NewsList from '@/components/NewsList'
-import { getLatestNews } from '@/lib/utils/news'
+import NewsList from '../../../components/NewsList'
+import { getLatestNews } from '../../../lib/utils/news'
 import React from 'react'
 
 const Latest = () => {

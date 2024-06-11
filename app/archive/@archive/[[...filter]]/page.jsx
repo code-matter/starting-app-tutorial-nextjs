@@ -1,13 +1,12 @@
-import NewsList from '@/components/NewsList'
-import { DUMMY_NEWS, MONTHS } from '@/lib/constants/dummy-news'
+import NewsList from '../../../../components/NewsList'
+import { DUMMY_NEWS, MONTHS } from '../../../../lib/constants/dummy-news'
 import {
     getAvailableNewsMonths,
     getAvailableNewsYears,
     getNewsForYear,
     getNewsForYearAndMonth,
-} from '@/lib/utils/news'
+} from '../../../../lib/utils/news'
 import Link from 'next/link'
-import { notFound } from 'next/navigation'
 import React from 'react'
 
 const FilteredNewsPage = ({ params }) => {
