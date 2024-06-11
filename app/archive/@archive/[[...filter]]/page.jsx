@@ -1,5 +1,5 @@
 import NewsList from '@/components/NewsList'
-import { DUMMY_NEWS } from '@/lib/constants/dummy-news'
+import { DUMMY_NEWS, MONTHS } from '@/lib/constants/dummy-news'
 import {
     getAvailableNewsMonths,
     getAvailableNewsYears,
@@ -7,6 +7,7 @@ import {
     getNewsForYearAndMonth,
 } from '@/lib/utils/news'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import React from 'react'
 
 const FilteredNewsPage = ({ params }) => {
@@ -35,6 +36,18 @@ const FilteredNewsPage = ({ params }) => {
             <p>No news found for the selected period.</p>
         )
 
+    // That's clunky..
+    if (
+        (selectedYear &&
+            !getAvailableNewsYears().includes(Number(selectedYear))) ||
+        (selectedMonth &&
+            !getAvailableNewsMonths(selectedYear).includes(
+                Number(selectedMonth)
+            ))
+    ) {
+        throw new Error('Invalid filter')
+    }
+
     return (
         <>
             <header id='archive-header'>
@@ -46,7 +59,9 @@ const FilteredNewsPage = ({ params }) => {
                                 : `/archive/${link}`
                             return (
                                 <li key={link}>
-                                    <Link href={href}>{link}</Link>
+                                    <Link href={href}>
+                                        {selectedYear ? MONTHS[link] : link}
+                                    </Link>
                                 </li>
                             )
                         })}
