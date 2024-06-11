@@ -1,0 +1,7 @@
+.mainHeader ul {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: rgb(80, 80, 88);
+  padding: 12px;
+}
