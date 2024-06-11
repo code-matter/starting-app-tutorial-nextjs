@@ -1,9 +1,12 @@
 import { DUMMY_NEWS } from "@/lib/constants/dummy-news";
+import { notFound } from "next/navigation";
 import React from "react";
 
 const NewsId = ({ params }) => {
   const slug = params.newsId;
   const currentNews = DUMMY_NEWS.find((news) => news.slug === slug);
+
+  if (!currentNews) notFound();
 
   return (
     <article className="news-article">
