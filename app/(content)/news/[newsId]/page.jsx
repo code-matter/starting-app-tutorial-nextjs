@@ -1,4 +1,4 @@
-import { DUMMY_NEWS } from '../../../lib/constants/dummy-news'
+import { DUMMY_NEWS } from '../../../../lib/constants/dummy-news'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import React from 'react'

@@ -1,8 +1,8 @@
 // INTERCEPTOR PAGE
-import { DUMMY_NEWS } from '../../../../../lib/constants/dummy-news' // WHY not @ ?!?!
+import { DUMMY_NEWS } from '../../../../../../lib/constants/dummy-news' // WHY not @ ?!?!
 import { notFound } from 'next/navigation'
 import React from 'react'
-import ModalBackdrop from '../../../../../components/ModalBackdrop'
+import ModalBackdrop from '../../../../../../components/ModalBackdrop'
 
 const InterceptedImagePage = ({ params }) => {
     const { newsId } = params
